@@ -56,6 +56,7 @@ for k=5:maxPeaks;
         [~,peakIndx(i)]=max(tempx);
         tempx(peakIndx(i))=0;
     end
+    peakIndx=sort(peakIndx);
     for i=2:k
         distances(i-1)=abs(peakIndx(i-1)-peakIndx(i));
     end
